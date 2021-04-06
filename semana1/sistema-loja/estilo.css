@@ -1,0 +1,140 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    text-align: center;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#top{
+    background-color: rgb(4, 39, 39);
+    color: white;
+    padding: 30px;
+}
+.top2{
+    padding-bottom: 50px;
+}
+
+#top p{
+    display: inline-block;
+}
+
+#nav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(100,100,100);
+    color: white;   
+}
+
+.main{
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+.main h1, h2, h3{
+    text-shadow: 1px 1px 5px #333;
+    color: white;
+}
+
+#nav a{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    text-decoration: none;
+}
+
+#nav a:hover{
+    background-color: rgb(80, 80, 80)
+}
+
+#nav a:link{
+    color: rgb(20, 10, 155);
+}
+
+#nav a:visited{
+    color: rgb(58, 0, 92);
+}
+
+#nav a:active{
+    color: rgb(4, 39, 39);
+    background-color: rgb(70, 70, 70);
+}
+
+img{
+    height: 50px;
+}
+
+#funcionarios{
+    list-style: none;
+    margin-left: -30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+form {
+    overflow: hidden;
+    text-align: right;
+    align-items: center;
+    margin-right: 30%;
+}
+
+input {
+    float: right;
+    clear: both;
+    padding-right: 500px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+table{
+    margin: auto;
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+}
+
+th{
+    border: 1px solid black;
+    color: darkred;
+}
+
+tr:hover{
+    background-color: rgb(165, 161, 161);
+}
+
+.easteregg{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.easteregg:hover{
+    background-color: rgba(161, 161, 161, 0.548);
+}
+
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+#social a{
+    margin-right: 20px;
+}
