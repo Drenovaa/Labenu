@@ -84,38 +84,31 @@ form {
     margin-right: 30%;
 }
 
-input {
+form input {
     float: right;
     clear: both;
     padding-right: 500px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 table{
     margin: auto;
+}
+
+#estoque table{
     border: 1px solid black;
 }
 
-td{
+#estoque td{
     border: 1px solid black;
 }
 
-th{
+#estoque th{
     border: 1px solid black;
     color: darkred;
 }
 
 tr:hover{
-    background-color: rgb(165, 161, 161);
+    background-color: rgb(212, 209, 209);
 }
 
 .easteregg{
@@ -129,12 +122,40 @@ tr:hover{
 }
 
 footer{
-    bottom: 0;
     position: fixed;
+    bottom: 0px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.356);
 }
 
 #social a{
     margin-right: 20px;
+}
+
+#compra input{
+    width: 35px;
+}
+
+#infocliente p, #compra p, input{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.finalizar{
+    height: 50px;
+}
+
+.finalizar input{
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.teste{
+    background-color: darkred;
+    color: white;
+}
+
+#historico td{
+    border-bottom: 1px solid black;
 }
