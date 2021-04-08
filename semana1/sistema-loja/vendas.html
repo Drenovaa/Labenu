@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="top">
+        <h1 class="top2">Cidadela</h1>
+    </div>
+    <div id="nav">
+        <a href="./index.html">Página Inicial</a>
+        <a href="./ctrl-estoque.html">Controle de Estoque</a>
+        <a href="add-produto.html">Adicionar Produto</a>
+        <a href="funcionarios.html">Funcionários</a>
+        <a href="vendas.html">Vendas</a>
+        <a href="historico.html">Histórico de vendas</a>
+    </div>
+
+    <div id="infocliente">
+        <h2>Formulário de venda</h2>
+        <p>Nome do Cliente: 
+            <input type="text" placeholder="Cidadela Júnior">
+        </p>
+        <p>Telefone: DDD
+            <input type="tel" class="ddd"required name="ddd" size="2" maxlength="3" id="ddd"placeholder="DDD">
+            Tel: <input type="tel" required name="telefone" maxlength="9" id="tel" placeholder="Telefone">
+        </p>
+        <p>E-mail do Cliente:
+            <input type="email" size="30" placeholder="cliente@cidadela.com">
+        </p>
+        <p>Forma de pagamento:
+            <select type="payment">
+                <option value="valor0">Selecione forma de pagamento</option>
+                <option value="valor1">Cartão de crédito</option>
+                <option value="valor2">Dinheiro</option>
+                <option value="valor3">Débito</option></select>
+        </p>
+        <p>Vendedor:
+            <select type="payment">
+                <option value="valor0">Vendedor</option>
+                <option value="valor1">André Lima</option>
+                <option value="valor2">Fernando Ferreira</option>
+                <option value="valor3">Grzegorz Brzęczyszczykiewicz</option>
+                <option value="valor4">Michel Pereira</option>
+                <option value="valor5">Milla Lopes</option>
+                <option value="valor6">Maria Antonia</option>
+                <option value="valor7">Pedro Duarte</option>
+            </select>
+        </p>
+    </div>
+    <div id="compra">
+        <h2>Itens</h2>
+        <p>Navio Bismarck: 
+            <input type="number" name="quantidade" min="0" max="2" value="0">
+        </p>
+        <p>Navio Yamato: 
+            <input type="number" name="quantidade" min="0" max="2" value="0">
+        </p>
+        <p>Navio Missouri: 
+            <input type="number" name="quantidade" min="0" max="4" value="0">
+        </p>
+        <p>Navio Shimakaze: 
+            <input type="number" name="quantidade" min="0" max="1" value="0">
+        </p>
+        <p>Navio Belfast: 
+            <input type="number" name="quantidade" min="0" max="10" value="0">
+        </p>
+        <p>Navio Richellieu:
+            <input type="number" name="quantidade" min="0" max="2" value="0">
+        </p>      
+    </div>
+    <footer class="finalizar">
+        <input type="button" value="Finalizar compra" onClick="location.href=location.href">
+    </footer>
+</body>
+</html>
