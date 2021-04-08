@@ -4,7 +4,7 @@
   *
   **/
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -63,6 +63,12 @@ div>p:first-child {
   *
   **/
 
+.lista{
+    list-style-type:decimal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #container-de-descricao {
     padding-top: 5%;
     background-color: #2274a5;
@@ -93,6 +99,10 @@ div>p:first-child {
 
 div:last-child {
     text-align: center;
+}
+
+a img:hover{
+    opacity: 50%;
 }
 
 .voltar{
