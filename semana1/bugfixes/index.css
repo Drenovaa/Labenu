@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+html{
+    font-family: roboto;
+}
+
 h2 {
     background-color: #fe7e02;
     padding: 10px 5px 10px 5px;
@@ -77,6 +81,7 @@ div>p:first-child {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+    
 }
 
 
@@ -86,14 +91,18 @@ div>p:first-child {
   *
   **/
 
-div:nth-child(2),
 div:last-child {
+    text-align: center;
+}
+
+.voltar{
     text-align: center;
 }
 
 table {
     width: 60%;
     text-align: center;
+    
 }
 
 td button {
