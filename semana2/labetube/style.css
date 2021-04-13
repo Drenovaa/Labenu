@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: darkorange;
+    display: flex;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+.labetube{
+    margin-left: 20px;
+    font-family: ubuntu;
+}
+input{
+    margin-right: 20px;
+    padding: 5px;
+}
+main{
+    height: 85%;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr) ;
+    align-items: center;
+    justify-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+h3{
+    height: 50%;
+}
+.link{
+    height: 180px;
+}
+footer{
+    display: flex;
+    height: 6%;
+    background-color: darkgray;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.rodape{
+    justify-self: center;
+}
+video{
+    height: 700px;
+}
+.video{
+    grid-row: 1/ sapn 2;
+    grid-column: 1/ span 4;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
