@@ -1,0 +1,217 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+}
+
+#main-container{
+    background: white;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 1%;
+    column-gap: 1%;
+}
+
+div>div {
+    border: 1px solid black;
+}
+#lateral{
+    background-color: grey;
+    grid-column: 1;
+    grid-row: 1/-1;
+}
+
+#first-block {
+    background-color: red;
+    grid-column: 1/ span 6;
+}
+
+.blue-block1, .blue-block2 {
+    background-color: blue;
+}
+
+.blue-block1 {
+    grid-column: 1/ span 2;
+}
+
+.yellow-block1 {
+    grid-column: 3/ span 2;
+}
+.green-block1 {
+    grid-column: 5/ span 2;
+}
+
+.blue-block2 {
+    grid-column: 1/ span 2;
+}
+
+.yellow-block2 {
+    grid-column: 3/ span 2;
+}
+.green-block2 {
+    grid-column: 5/ span 2;
+}
+.black-block1 {
+    grid-row: 4 /span 2;
+    grid-column: 1/ span 3;
+}
+.black-block2 {
+    grid-row: 4 /span 2;
+    grid-column: 4/ span 3;
+}
+.white-block1{
+    grid-column: 1/ span 2;
+}
+.white-block2{
+    grid-column: 3/ span 2;
+}
+.white-block3{
+    grid-column: 5/ span 2;
+}
+
+.blue-block1, .blue-block2, .black-block1, .white-block1{
+    margin-left: 10px;
+}
+.green-block1, .green-block2, .black-block2, .white-block3{
+    margin-right: 10px;
+}
+.yellow-block1, .yellow-block2 {
+    background-color: yellow;
+}
+
+.green-block1, .green-block2 {
+    background-color: green;
+}
+
+.black-block1, .black-block2 {
+    background-color: black;
+    color: white;
+}
+
+.white-block1, .white-block2, .white-block3{
+    background-color: white;
+}
+div[class$="block1"], div[class$="block2"], div[class$="block3"]{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+@media screen and (max-device-width:1200px){
+    #main-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        row-gap: 1%;
+        column-gap: 1%;
+    }
+    #first-block {
+        background-color: red;
+        grid-column: 1/ 5;
+    }
+    .green-block1 {
+        grid-column: 1/ 5;
+    }
+ 
+    .green-block2 {
+        grid-column: 1/ 5;
+    }
+    .black-block1 {
+        grid-row: 6 /span 2;
+        grid-column: 1/ span 2;
+    }
+    .black-block2 {
+        grid-row: 6 /span 2;
+        grid-column: 3/ span 2;
+
+    }
+    .white-block1{
+        grid-row: 8;
+    }
+    .white-block2{
+        grid-row: 8;
+    }
+    .white-block3{
+        grid-column: 1/ span 4;
+        grid-row: 9;
+    }
+    .blue-block1, .blue-block2, .black-block1, .white-block1, .white-block3, .green-block1, .green-block2{
+        margin-left: 10px;
+    }
+    .green-block1, .green-block2, .black-block2, .white-block2, .yellow-block1, .yellow-block2{
+        margin-right: 10px;
+    }
+
+}
+@media screen and (min-device-width:421px) and (max-device-width:800px){
+    body{
+        grid-template-columns: 0% 1fr;
+    }
+}
+
+@media screen and (max-device-width:420px){
+    body{
+        grid-template-columns: 0% 1fr;
+    }
+    #main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(14, 12%);
+        row-gap: 1%;
+        column-gap: 1%;
+    }
+    .blue-block1 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .yellow-block1 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .green-block1 {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    .blue-block2 {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    
+    .yellow-block2 {
+        grid-row: 6;
+        grid-column: 1;
+    }
+    .green-block2 {
+        grid-row: 7;
+        grid-column: 1;
+    }
+    .black-block1 {
+        grid-row: 8/ 10;
+        grid-column: 1;
+    }
+    .black-block2 {
+        grid-row: 10/12;
+        grid-column: 1;
+    }
+    .white-block1{
+        grid-row: 12;
+        grid-column: 1;
+    }
+    .white-block2{
+        grid-row: 13;
+        grid-column: 1;
+    }
+    .white-block3{
+        grid-row: 14;
+        grid-column: 1;
+    }
+    div[class$="block1"], div[class$="block2"], div[class$="block3"]{
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+    
+}

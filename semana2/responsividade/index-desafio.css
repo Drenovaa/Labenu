@@ -1,0 +1,116 @@
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+#main-container{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div>div{
+    border: 1px solid black;
+}
+
+#first-block {
+    background-color: red;
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+}
+
+.blue-block1, .blue-block2 {
+    background-color: blue;
+    display: flex;
+    width: 31vw;
+    height: 15vh;
+    margin: 10px;
+}
+
+.yellow-block1, .yellow-block2 {
+    background-color: yellow;
+    display: flex;
+    width: 31vw;
+    height: 15vh;
+    margin: 10px;
+}
+
+.green-block1, .green-block2 {
+    background-color: green;
+    display: flex;
+    width: 31vw;
+    height: 15vh;
+    margin: 10px;
+}
+
+.black-block1, .black-block2 {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 25vh;
+    width: 47vw;
+    margin: 10px;
+}
+.white-block1, .white-block2, .white-block3{
+    background-color: white;
+    display: flex;
+    height: 15vh;
+    width: 31vw;
+    margin: 10px;
+}
+
+div[class$="block1"], div[class$="block2"], div[class$="block3"]{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+@media screen and (min-device-width:450px) and (max-device-width:1200px) {
+    #main-container{
+        display:flex;
+    }
+    .blue-block1, .blue-block2 {
+        width: 45%;
+    }
+    .yellow-block1, .yellow-block2 {
+        width: 45%;
+    }
+    .green-block1, .green-block2 {;
+        width: 93%;
+    }
+    .black-block1, .black-block2 {
+        width: 45vw;
+    }
+    .white-block1, .white-block2{
+        width: 45vw;
+    }
+    .white-block3{
+        width: 93%;
+    }
+}
+@media screen and (max-width: 601px) {
+    .blue-block1, .blue-block2 {
+        width: 100%;
+    }
+    .yellow-block1, .yellow-block2 {
+        width: 100%;
+    }
+    .green-block1, .green-block2 {;
+        width: 100%;
+    }
+    .black-block1, .black-block2 {
+        width: 100%;
+    }
+    .white-block1, .white-block2{
+        width: 100%;
+    }
+    .white-block3{
+        width: 100%;
+}
+}
+
