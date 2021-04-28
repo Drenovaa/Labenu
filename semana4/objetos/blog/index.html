@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog</title>
+</head>
+<body>
+    <section id="formulario">
+        <label for="titulo-post">Título:</label>
+        <input type="text" id="titulo-post" placeholder="Coloque o titulo para a postagem">
+
+        <label for="autor-post">Autor:</label>
+        <input type="text" id="autor-post" placeholder="Coloque o nome do autor da postagem">
+
+        <label for="imagem-post">URL</label>
+        <input type="text" id="imagem-post" placeholder="Coloque a Url da imagem">
+
+        <label for="conteudo-post">Conteúdo:</label>
+        <textarea id="conteudo-post" cols="30" rows="10"></textarea>
+        
+        <button onclick="criarPost()">Criar Post</button>
+        <br>
+        <button onclick="exibePost()">Exibir Post</button>
+        <br>
+        <a href="index-page2.html"  onclick="pagePost()">Exibir em pagina</a>
+    </section>
+
+
+    <section id="posts">
+        
+    </section>
+</body>
+</html>
