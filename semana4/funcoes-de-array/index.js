@@ -99,7 +99,12 @@ function filtrarDespesas(){
 }
 // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
 
-
+function ordenarValores(){
+    const valoresOrdenados = arrDespesas.sort((a, b) => {
+    return b.valor - a.valor;
+});
+imprimirDespesas(valoresOrdenados);
+}
 
 
 
