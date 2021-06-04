@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import MatchPage from './pages/MatchPage/MatchPage'
+import React, { useState } from "react";
+import Home from './pages/Home/Home'
+import Profile from './pages/Profile/Profile'
+import styled from 'styled-components';
 
-function App() {
+
+const MainContainer = styled.div`
+  width: 400px;
+  height: 650px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px #0000000F;
+`
+
+export default function App() {
+  const [page, setPage] = useState("home");
+  const [details, setDetails] = useState({})
+
+  const changePage = (page) => {
+    setPage(page);
+  };
+  
+  const profileInfo = (profile) =>{
+    setPage("profile")
+    setDetails(profile)
+  }
+
+  const renderPage = ()=>{
+    switch(page){
+      case "matches":
+        return (<MatchPage choosePage={changePage} profileInfo={profileInfo} back={changePage}/>)
+      case "profile":
+        return (<Profile choosePage={changePage} details={details} back={changePage}/>)
+      default:
+        return (<Home choosePage={changePage}/>)
+    }
+  }
+
+  const showPage = renderPage()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      {showPage}
+    </MainContainer>
   );
 }
-
-export default App;
