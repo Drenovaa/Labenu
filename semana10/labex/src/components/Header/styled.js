@@ -6,7 +6,6 @@ export const HeaderMain = styled.div`
     grid-template-rows: 70% 30%;
     background-color: #212121;
     width: 100%;
-    height: 140px;
     color: white;
 `
 
@@ -31,10 +30,14 @@ export const NavOption = styled.div`
     width: 100px;
     align-items: center;
     justify-content: center;
-    border-left: solid #595959 1px;
-    border-right: solid #595959 1px;
+    border-left: 1px solid rgba(221, 221, 221, 0.8);
+    border-right: 1px solid rgba(221, 221, 221, 0.8);
     :hover{
         background-color: #212121;
+        cursor: pointer;
+        color: #b08a4b;
+        border-left: 1px solid rgba(176, 138, 75, 0.8);
+        border-right: 1px solid rgba(176, 138, 75, 0.8);
     }
 
 `
@@ -48,7 +51,7 @@ export const ButtonLogin = styled.button`
     font-family: Ubuntu;
     font-size: 18px;
     color: white;
-    width: 200px;
+    width: 150px;
     height: 65px;
     background: rgba(33, 33, 33, 0.8);
     border: 1px solid rgba(221, 221, 221, 0.8);
@@ -57,6 +60,16 @@ export const ButtonLogin = styled.button`
     :hover{
         background: rgb(0, 0, 0);
         cursor: pointer;
+        color: #b08a4b;
+        border: 1px solid rgba(176, 138, 75, 0.8);
     }
 
+`
+export const LogoImg = styled.img`
+    width: 80px;
+    height: 80px;
+    :hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 `
