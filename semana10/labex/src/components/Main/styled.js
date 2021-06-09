@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import img1 from './../../img/spacex-rocket-launch-base-space-center-launching-trail-arc-s.jpg'
 
+// Base Background page//
 export const HomeMain = styled.div`
     position: relative;
     display: flex;
@@ -20,13 +21,15 @@ export const HomeMain = styled.div`
 
     }
 `
-
 export const HomeBack = styled.div`
     background: #181818;
     height: 100vh;
     width: 100vw;
+    font-family: Ubuntu;
 `
+//--------------------------------------//
 
+//Welcome page msg and login//
 export const MessageBlock = styled.div`
     position: absolute;
     display: flex;
@@ -41,7 +44,6 @@ export const MessageBlock = styled.div`
 
 export const WelcomeText = styled.h2`
     color: white;
-    font-family: Ubuntu;
 `
 export const SelectPage = styled.div`
     display: flex;
@@ -49,30 +51,10 @@ export const SelectPage = styled.div`
     width: 100%;
 
 `
-
-export const ButtonPage = styled.button`
-    font-family: Ubuntu;
-    font-size: 18px;
-    color: white;
-    width: 150px;
-    height: 65px;
-    background: rgba(33, 33, 33, 0.8);
-    border: 1px solid rgba(221, 221, 221, 0.8);
-    box-sizing: border-box;
-    border-radius: 30px;
-    :hover{
-        background: rgb(0, 0, 0);
-        cursor: pointer;
-        color: #b08a4b;
-    }
-
-`
-
 export const LogoImg = styled.img`
     height: 150px;
     width: 150px;
 `
-
 export const LogoDiv = styled.div`
     position: absolute;
     display: flex;
@@ -84,7 +66,6 @@ export const LogoDiv = styled.div`
     left: 0;
     top: 0;
     color: #b08a4b;
-    font-family: Ubuntu;
 `
 export const LogoName = styled.h2`
     margin-bottom: 0;
@@ -94,6 +75,10 @@ export const LogoText = styled.p`
     margin: 0;
 `
 
+//--------------------------------------//
+
+
+//User and admin page setup//
 export const MainBodyPage = styled.div`
     position: relative;
     display: flex;
@@ -142,3 +127,40 @@ export const BodyContainer = styled.div`
     }
 
 `
+//--------------------------------------//
+
+//Buttonstyled//
+export const ButtonPage = styled.button`
+    font-family: Ubuntu;
+    font-size: 18px;
+    color: white;
+    width: 150px;
+    height: 65px;
+    background: rgba(33, 33, 33, 0.8);
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    box-sizing: border-box;
+    border-radius: 30px;
+    :hover{
+        background: rgb(0, 0, 0);
+        cursor: pointer;
+        color: #b08a4b;
+    }
+
+`
+//--------------------------------------//
+
+//Inputstyled//
+export const InputDisplay = styled.input`
+    font-family: Ubuntu;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 65px;
+    background: rgba(33, 33, 33, 0.8);
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    box-sizing: border-box;
+    border-radius: 30px;
+`
+//--------------------------------------//

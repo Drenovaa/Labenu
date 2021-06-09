@@ -15,8 +15,28 @@ export default function Header(props) {
         }
     }
 
+    const authorization = (action) =>{
+        if(action === "Login"){
+            history.push("/login")
+        }else if(action === "LogOut"){
+            localStorage.removeItem('token')
+            history.push("/login")
+        }
+    }
+
+    let nameLogin
+    const token = window.localStorage.getItem("token");
+    if(token === null){
+      nameLogin = "Login"
+    }else{
+        nameLogin = "LogOut"
+    }
+
     return (
         <HeaderMain>
+            <ButtonHeader>
+                <ButtonLogin onClick={()=>authorization(nameLogin)}>{nameLogin}</ButtonLogin>
+            </ButtonHeader>
             <LogoHeader>
                 <LogoImg src={logo1} onClick={()=> goToHomePage(history)}/>
             </LogoHeader>

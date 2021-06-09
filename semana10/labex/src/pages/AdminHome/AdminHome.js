@@ -3,12 +3,17 @@ import { useHistory } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Footer from '../../components/Footer/Footer'
 import Header from "../../components/Header/Header";
-import { HomeBack, MainBodyPage, LayoutPage, BodyContainer} from "../../components/Main/styled";
+import { HomeBack, MainBodyPage, LayoutPage, BodyContainer, ButtonPage} from "../../components/Main/styled";
 import {URL} from '../../parameters/URL'
+import {useProtectedPage} from '../../hooks/useProtectedPage'
+import {token} from '../../parameters/auth'
+import { CardTrip, CreateTripDiv, TripDisplay } from "./styled";
+import { goToCreateTripPage, goToTripDetailsPage } from "../../routes/coordinator";
 
 
 
 const AdminHome = () => {
+    useProtectedPage()
     const buttonName = "Usuário"
     const [trips, setTrips] = useState([])
     const history = useHistory()
@@ -20,16 +25,46 @@ const AdminHome = () => {
     const getTrips = () =>{
         axios
             .get(URL+"/trips")
+            .then((res) =>{
+                setTrips(res.data.trips)
+            })
+            .catch((error) =>{
+                alert("Algo deu errado", error)
+            })
     }
+
+    const deleteTrip =(id) =>{
+        if(window.confirm ("Quer pagar esta viagem?")){
+            axios
+                .delete(URL+"/trips/"+id, {
+                    headers:{
+                        auth: token
+                    }
+                })
+                .then(() => getTrips())
+                .catch((error) => alert("Algo deu errado", error))
+        }
+    }
+
+    const trip = trips.map((trip) =>{
+        return(
+        <TripDisplay key={trip.id} onClick={()=> goToTripDetailsPage(history, trip.id)}>
+            <h3>{trip.name}</h3>
+            <ButtonPage onClick={()=> deleteTrip(trip.id)}>Remover</ButtonPage>
+        </TripDisplay>
+        )
+    })
 
     return (
         <HomeBack>
             <LayoutPage>
-                <Header
-                    buttonName={buttonName}
-                />
+                <Header buttonName={buttonName}/>
                 <MainBodyPage>
                     <BodyContainer>
+                        <CreateTripDiv>
+                            <ButtonPage onClick={()=> goToCreateTripPage(history)}>Criar viagem</ButtonPage>
+                        </CreateTripDiv>
+                        <CardTrip>{trip}</CardTrip>
                     </BodyContainer>
                 </MainBodyPage>
                 <Footer/>

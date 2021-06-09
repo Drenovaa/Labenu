@@ -36,10 +36,10 @@ export default function Footer() {
                 <MainOption>
                     <OptionLink>Social</OptionLink>
                     <MediaContainer>
-                        <MediaLogos src={gitLogo}/>
-                        <MediaLogos src={instaLogo}/>
-                        <MediaLogos src={linkLogo}/>
-                        <MediaLogos src={twitterLogo}/>
+                        <a href="https://github.com/" target="_blank"><MediaLogos src={gitLogo}/></a>
+                        <a href="https://www.instagram.com/" target="_blank"><MediaLogos src={instaLogo}/></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><MediaLogos src={linkLogo}/></a>
+                        <a href="https://twitter.com/home/" target="_blank"><MediaLogos src={twitterLogo}/></a>
                     </MediaContainer>
                 </MainOption>
             </NavFooter>
