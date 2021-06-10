@@ -3,6 +3,7 @@ import { ButtonHeader, ButtonLogin, HeaderMain, LogoHeader, LogoImg, NavHeader, 
 import logo1 from './../../img/Capturar_select-area_20210608091410-removebg-preview.png'
 import { useHistory } from "react-router-dom";
 import { goToAdmPage, goToHomePage, goToUserPage } from "../../routes/coordinator";
+import { ButtonPageBlack } from "../Main/styled";
 
 export default function Header(props) {
     const history = useHistory()
@@ -35,13 +36,13 @@ export default function Header(props) {
     return (
         <HeaderMain>
             <ButtonHeader>
-                <ButtonLogin onClick={()=>authorization(nameLogin)}>{nameLogin}</ButtonLogin>
+                <ButtonPageBlack onClick={()=>authorization(nameLogin)}>{nameLogin}</ButtonPageBlack>
             </ButtonHeader>
             <LogoHeader>
                 <LogoImg src={logo1} onClick={()=> goToHomePage(history)}/>
             </LogoHeader>
             <ButtonHeader>
-                <ButtonLogin onClick={()=>pageSelect(props.buttonName)}>{props.buttonName}</ButtonLogin>
+                <ButtonPageBlack onClick={()=>pageSelect(props.buttonName)}>{props.buttonName}</ButtonPageBlack>
             </ButtonHeader>
             <NavHeader>
                 <NavOption>HOME</NavOption>

@@ -3,12 +3,13 @@ import { useHistory } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Footer from '../../components/Footer/Footer'
 import Header from "../../components/Header/Header";
-import { HomeBack, MainBodyPage, LayoutPage, BodyContainer, ButtonPage} from "../../components/Main/styled";
+import { HomeBack, MainBodyPage, LayoutPage, BodyContainer, ButtonPageBlack} from "../../components/Main/styled";
 import {URL} from '../../parameters/URL'
 import {useProtectedPage} from '../../hooks/useProtectedPage'
 import {token} from '../../parameters/auth'
-import { CardTrip, CreateTripDiv, TripDisplay } from "./styled";
+import { CardTrip, CreateTripDiv, DetailsClick, TripDisplay } from "./styled";
 import { goToCreateTripPage, goToTripDetailsPage } from "../../routes/coordinator";
+
 
 
 
@@ -48,9 +49,9 @@ const AdminHome = () => {
 
     const trip = trips.map((trip) =>{
         return(
-        <TripDisplay key={trip.id} onClick={()=> goToTripDetailsPage(history, trip.id)}>
-            <h3>{trip.name}</h3>
-            <ButtonPage onClick={()=> deleteTrip(trip.id)}>Remover</ButtonPage>
+        <TripDisplay>
+            <DetailsClick key={trip.id} onClick={()=> goToTripDetailsPage(history, trip.id)}><h3>{trip.name}</h3></DetailsClick>
+            <ButtonPageBlack onClick={()=> deleteTrip(trip.id)}>Remover</ButtonPageBlack>
         </TripDisplay>
         )
     })
@@ -62,7 +63,7 @@ const AdminHome = () => {
                 <MainBodyPage>
                     <BodyContainer>
                         <CreateTripDiv>
-                            <ButtonPage onClick={()=> goToCreateTripPage(history)}>Criar viagem</ButtonPage>
+                            <ButtonPageBlack onClick={()=> goToCreateTripPage(history)}>Criar viagem</ButtonPageBlack>
                         </CreateTripDiv>
                         <CardTrip>{trip}</CardTrip>
                     </BodyContainer>

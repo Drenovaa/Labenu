@@ -15,9 +15,9 @@ export const CardTrip = styled.div`
     justify-content: space-between;
     :hover{
         background-color: rgba(33, 33, 33, 0.8);
-        cursor: pointer;
         color: #b08a4b;
         border-left: 1px solid rgba(176, 138, 75, 0.8);
+        cursor: default;
     }
 
  `
@@ -26,4 +26,11 @@ export const CreateTripDiv = styled.div`
     justify-content: center;
     margin-top: 20px;
 
+`
+
+export const DetailsClick = styled.div`
+    width: 100%;
+    :hover{
+        cursor: pointer;
+    }
 `

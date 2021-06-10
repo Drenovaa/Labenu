@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
-import useInput from './../../hooks/useInput'
-import { InputDisplay, ButtonPage, HomeBack, HomeMain, LogoDiv, LogoImg, LogoName, LogoText, MessageBlock, WelcomeText, SelectPage } from './../../components/Main/styled';
+import {useForm} from './../../hooks/useForm'
+import { InputDisplay, HomeBack, HomeMain, LogoDiv, LogoImg, LogoName, LogoText, MessageBlock, WelcomeText, SelectPage, ButtonPageBlack, ButtonPageGold } from './../../components/Main/styled';
 import logo1 from './../../img/Capturar_select-area_20210608091410-removebg-preview.png'
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { URL } from '../../parameters/URL';
 import { goToHomePage } from '../../routes/coordinator';
+import { SelectLoginPage } from './styled';
+
+
+const initialForm = {email: "", password: "",};
 
 const LoginPage = () => {
 
-    const [email, handleEmail] = useInput("")
-    const [password, handlePassword] = useInput("")
+    const [form, handleValue, resetForm] = useForm(initialForm);
     const history = useHistory()
 
     useEffect(() => {
@@ -19,9 +22,12 @@ const LoginPage = () => {
         }
     })
 
-
-    const Login = () =>{
-        const body = {email, password}
+    const Login = (e) =>{
+        e.preventDefault()
+        const body = {
+            email: form.email,
+            password: form.password
+        }
 
         axios
             .post(URL+"/login", body)
@@ -42,12 +48,28 @@ const LoginPage = () => {
                 </LogoDiv>
                 <MessageBlock>
                     <WelcomeText>LogIn</WelcomeText>
-                    <InputDisplay type="text" placeholder="email" value={email} onChange={handleEmail}/>
-                    <InputDisplay type="password" placeholder="senha" value={password} onChange={handlePassword}/>
-                    <SelectPage>
-                        <ButtonPage onClick={()=> goToHomePage(history)}>Voltar</ButtonPage>
-                        <ButtonPage onClick={Login}>Entrar</ButtonPage>
-                    </SelectPage>
+                    <form onSubmit={Login}>
+                        <InputDisplay
+                        name="email"
+                        type="email" 
+                        placeholder="email" 
+                        value={form.email} 
+                        onChange={handleValue}
+                        />
+                        <InputDisplay 
+                        name="password"
+                        type="password" 
+                        placeholder="senha" 
+                        value={form.password} 
+                        onChange={handleValue}
+                        />
+                        <SelectLoginPage>
+                            <ButtonPageGold>Entrar</ButtonPageGold>
+                        </SelectLoginPage>
+                    </form>
+                    <SelectLoginPage>
+                        <ButtonPageBlack onClick={()=> goToHomePage(history)}>Voltar</ButtonPageBlack>
+                    </SelectLoginPage>
                 </MessageBlock>
             </HomeMain>
         </HomeBack>

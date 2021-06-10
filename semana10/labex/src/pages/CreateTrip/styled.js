@@ -19,26 +19,11 @@ export const InputAddTrip = styled.input`
         appearance: none;
         margin: 0; 
     }
-`
-
-export const SelectDisplay = styled.select`
-    margin-top: 20px;
-    font-family: Ubuntu;
-    outline: none;
-    font-size: 18px;
-    color: white;
-    width: 100%;
-    height: 65px;
-    background: rgba(33, 33, 33, 0.8);
-    border: 1px solid rgba(221, 221, 221, 0.8);
-    box-sizing: border-box;
-    border-radius: 10px;
-    text-align-last:center;
-`
-
-export const OptionDisplay = styled.option`
-    background: rgba(33, 33, 33, 0.8);
-    text-align: center;
+    ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    margin-right: 10px;
+    
+}
 `
 
 export const DivSelect = styled.div`
@@ -53,4 +38,13 @@ export const PageName = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 10px;
+`
+
+export const ButtonsDiv = styled.div`
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+`
+export const FormContainer = styled.form`
+    width: 100%;
 `

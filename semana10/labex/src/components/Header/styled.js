@@ -34,7 +34,7 @@ export const NavOption = styled.div`
     border-right: 1px solid rgba(221, 221, 221, 0.8);
     :hover{
         background-color: #212121;
-        cursor: pointer;
+        cursor: pointer!important;
         color: #b08a4b;
         border-left: 1px solid rgba(176, 138, 75, 0.8);
         border-right: 1px solid rgba(176, 138, 75, 0.8);
@@ -47,29 +47,11 @@ export const ButtonHeader =styled.div`
     align-items: center;
 `
 
-export const ButtonLogin = styled.button`
-    font-family: Ubuntu;
-    font-size: 18px;
-    color: white;
-    width: 150px;
-    height: 65px;
-    background: rgba(33, 33, 33, 0.8);
-    border: 1px solid rgba(221, 221, 221, 0.8);
-    box-sizing: border-box;
-    border-radius: 30px;
-    :hover{
-        background: rgb(0, 0, 0);
-        cursor: pointer;
-        color: #b08a4b;
-        border: 1px solid rgba(176, 138, 75, 0.8);
-    }
-
-`
 export const LogoImg = styled.img`
     width: 80px;
     height: 80px;
     :hover{
         transform: scale(1.05);
-        cursor: pointer;
+        cursor: pointer!important;
     }
 `

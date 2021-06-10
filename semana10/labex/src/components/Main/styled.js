@@ -130,7 +130,7 @@ export const BodyContainer = styled.div`
 //--------------------------------------//
 
 //Buttonstyled//
-export const ButtonPage = styled.button`
+export const ButtonPageBlack = styled.button`
     font-family: Ubuntu;
     font-size: 18px;
     color: white;
@@ -144,6 +144,26 @@ export const ButtonPage = styled.button`
         background: rgb(0, 0, 0);
         cursor: pointer;
         color: #b08a4b;
+        border: 1px solid rgba(176, 138, 75, 0.8);
+    }
+
+`
+
+export const ButtonPageGold = styled.button`
+    font-family: Ubuntu;
+    font-size: 18px;
+    color: white;
+    width: 150px;
+    height: 65px;
+    background: rgba(176, 138, 75, 0.8);
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    box-sizing: border-box;
+    border-radius: 30px;
+    :hover{
+        background: rgb(0, 0, 0);
+        cursor: pointer;
+        color: #b08a4b;
+        border: 1px solid rgba(176, 138, 75, 0.8);
     }
 
 `
@@ -152,6 +172,7 @@ export const ButtonPage = styled.button`
 //Inputstyled//
 export const InputDisplay = styled.input`
     font-family: Ubuntu;
+    margin-top: 10px;
     outline: none;
     font-size: 18px;
     text-align: center;
@@ -162,5 +183,40 @@ export const InputDisplay = styled.input`
     border: 1px solid rgba(221, 221, 221, 0.8);
     box-sizing: border-box;
     border-radius: 30px;
+`
+//--------------------------------------//
+
+//SelectOptions//
+export const SelectDisplay = styled.select`
+    margin-top: 20px;
+    font-family: Ubuntu;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    height: 65px;
+    background: rgba(33, 33, 33, 0.8);
+    border: 1px solid rgba(221, 221, 221, 0.8);
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align-last:center;
+
+`
+
+export const OptionDisplay = styled.option`
+    background-color: rgba(33, 33, 33, 0.8);
+    text-align: center;
+    :active, :hover{
+        background-color: #b08a4b;
+    }
+`
+//--------------------------------------//
+
+//HeaderPageAdm//
+export const HeaderPage = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    
 `
 //--------------------------------------//

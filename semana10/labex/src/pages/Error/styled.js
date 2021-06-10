@@ -34,3 +34,14 @@ export const ErrorText = styled.h2`
 color: #b08a4b;
 font-family: Ubuntu;
 `
+
+export const ErrorButtons = styled.div`
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    height: 40vh;
+    left: 60%;
+    top: 50%;
+`
