@@ -70,3 +70,13 @@ export const MediaLogos = styled.img`
         cursor: pointer;
     }
 `
+export const LinkA = styled.a`
+    text-decoration: none;
+    :visited{
+        color:white;
+    }
+    :link{
+        color:white;
+    }
+
+`

@@ -27,6 +27,7 @@ export default function CreateTrip() {
     const history = useHistory()
 
     const addTrip = (e) =>{
+        const token = window.localStorage.getItem("token")
         e.preventDefault()
         resetForm()
 
@@ -38,10 +39,11 @@ export default function CreateTrip() {
             durationInDays: form.durationInDays,
         }
         axios
-            .post(URL+"/trips", body,{
-                headers:{
-                    auth:token
+            .post(URL+"/trips", body, {
+                headers: {
+                    auth: token
                 }
+
             })
             .then((res) =>{
                 history.push("/admin/trips/list")

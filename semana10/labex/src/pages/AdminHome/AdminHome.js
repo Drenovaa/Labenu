@@ -24,8 +24,14 @@ const AdminHome = () => {
     },[])
 
     const getTrips = () =>{
+        const token = window.localStorage.getItem("token")
         axios
-            .get(URL+"/trips")
+            .get(URL+"/trips", {
+                headers: {
+                    auth: token
+                }
+
+            })
             .then((res) =>{
                 setTrips(res.data.trips)
             })
@@ -38,9 +44,10 @@ const AdminHome = () => {
         if(window.confirm ("Quer pagar esta viagem?")){
             axios
                 .delete(URL+"/trips/"+id, {
-                    headers:{
+                    headers: {
                         auth: token
                     }
+    
                 })
                 .then(() => getTrips())
                 .catch((error) => alert("Algo deu errado", error))

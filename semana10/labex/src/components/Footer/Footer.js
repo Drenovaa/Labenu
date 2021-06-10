@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterMain, LogoDivFooter, LogoFooter, NavFooter, MainOption, FooterLinks, OptionLink, MediaContainer, MediaLogos } from "./styled";
+import { FooterMain, LogoDivFooter, LogoFooter, NavFooter, MainOption, FooterLinks, OptionLink, MediaContainer, MediaLogos, LinkA } from "./styled";
 import logo1 from './../../img/Capturar_select-area_20210608091410-removebg-preview.png'
 import { useHistory } from "react-router-dom";
 import { goToAdmPage, goToHomePage, goToUserPage } from "../../routes/coordinator";
@@ -26,12 +26,19 @@ export default function Footer() {
                 </MainOption>
                 <MainOption>
                     <OptionLink>Informações</OptionLink>
+                    <FooterLinks onClick={()=> history.push("/404")}>É possivel ir de fusca até o sol?</FooterLinks>
+                    <FooterLinks onClick={()=> history.push("/404")}>Quando fica de noite no sol?</FooterLinks>
+                    <FooterLinks onClick={()=> history.push("/404")}>É possivel perder peso indo para marte?</FooterLinks>
                 </MainOption>
                 <MainOption>
                     <OptionLink>Institucional</OptionLink>
+                    <LinkA href="https://pt.wikipedia.org/wiki/Sistema_Solar" target="_blank"><FooterLinks>Conheça a vizinhança</FooterLinks></LinkA>
+                    <LinkA href="https://youtu.be/n6dbT9StGCE" target="_blank"><FooterLinks>Plutão é planeta?</FooterLinks></LinkA>
                 </MainOption>
                 <MainOption>
                     <OptionLink>Contato</OptionLink>
+                    <LinkA href="mailto:astrodev@gmail.com.br?subject=subject text"><FooterLinks>e-mail</FooterLinks></LinkA>
+                    <FooterLinks>(011)1234-8765</FooterLinks>
                 </MainOption>
                 <MainOption>
                     <OptionLink>Social</OptionLink>

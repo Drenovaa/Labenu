@@ -40,11 +40,10 @@ const Router = () =>{
                 <Route exact path="/trips/application">
                     <ApplicationFormPage/>
                 </Route>        
-                
+        
                 <Route>
                     <Error/>
                 </Route>
-
             </Switch>
         </BrowserRouter>
     )

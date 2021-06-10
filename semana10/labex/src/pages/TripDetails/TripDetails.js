@@ -6,7 +6,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import axios from "axios";
 import { URL } from "../../parameters/URL";
-import { token } from "../../parameters/auth";
+import { axiosAuth } from "../../parameters/auth";
 import { Passengers,HeaderBox, TripContainer, TripName, Volunteers,TripInfo, TextInfo, ButtonBody, CandidatesDiv, ApproveDiv, InfoBox } from "./styled";
 import { goToLastPage } from "../../routes/coordinator";
 
@@ -24,6 +24,7 @@ export default function TripDetails() {
     },[])
 
     const getDetails = () =>{
+        const token = window.localStorage.getItem("token")
         axios
             .get(URL+"/trip/"+details.id, {
                 headers:{
@@ -40,17 +41,18 @@ export default function TripDetails() {
     }
 
     const selectCandidate = (approval, id) =>{
+        const token = window.localStorage.getItem("token")
         const body = {
             approve: approval
         }
         axios
-            .put(URL+"/trips/"+details.id+"/candidates/"+id+"/decide", body, {
+            .put(URL+"/trips/"+details.id+"/candidates/"+id+"/decide", body,  {
                 headers:{
                     auth: token
                 }
             })
             .then((res) =>{
-                alert("Candidato aprovado")
+                alert(res.data.message)
                 getDetails()
 
             })

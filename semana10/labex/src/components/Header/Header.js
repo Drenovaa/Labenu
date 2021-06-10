@@ -45,11 +45,11 @@ export default function Header(props) {
                 <ButtonPageBlack onClick={()=>pageSelect(props.buttonName)}>{props.buttonName}</ButtonPageBlack>
             </ButtonHeader>
             <NavHeader>
-                <NavOption>HOME</NavOption>
-                <NavOption>INFOS</NavOption>
-                <NavOption>PACOTES</NavOption>
-                <NavOption>CONTATO</NavOption>
-                <NavOption>SOBRE NÓS</NavOption>
+                <NavOption onClick={()=>history.push("/")}>HOME</NavOption>
+                <NavOption onClick={()=>history.push("/404")}>INFOS</NavOption>
+                <NavOption onClick={()=>history.push("/404")}>PACOTES</NavOption>
+                <NavOption onClick={()=>history.push("/404")}>CONTATO</NavOption>
+                <NavOption onClick={()=>history.push("/404")}>SOBRE NÓS</NavOption>
             </NavHeader>
         </HeaderMain>
     )
