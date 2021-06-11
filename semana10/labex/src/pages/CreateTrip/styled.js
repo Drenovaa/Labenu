@@ -22,8 +22,10 @@ export const InputAddTrip = styled.input`
     ::-webkit-calendar-picker-indicator {
     filter: invert(1);
     margin-right: 10px;
-    
 }
+    @media screen and (max-device-width: 1057px){
+            border-radius: 20px;
+    }
 `
 
 export const DivSelect = styled.div`
@@ -32,6 +34,9 @@ export const DivSelect = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 60%;
+    @media screen and (max-device-width: 1057px){
+        width: 90%
+    }
 
 `
 export const PageName = styled.div`
@@ -44,6 +49,9 @@ export const ButtonsDiv = styled.div`
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
+    @media screen and (max-device-width: 1057px){
+        margin-bottom: 10px;
+    }
 `
 export const FormContainer = styled.form`
     width: 100%;

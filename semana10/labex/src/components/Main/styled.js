@@ -18,7 +18,6 @@ export const HomeMain = styled.div`
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.3;
-
     }
 `
 export const HomeBack = styled.div`
@@ -40,6 +39,16 @@ export const MessageBlock = styled.div`
     height: 40vh;
     left: 60%;
     top: 50%;
+    @media screen and (max-device-width: 1057px){
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        left: 0;
+        width: 100%;
+    }
 `
 
 export const WelcomeText = styled.h2`
@@ -49,6 +58,12 @@ export const SelectPage = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media screen and (max-device-width: 1057px){
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }
 
 `
 export const LogoImg = styled.img`
@@ -66,6 +81,17 @@ export const LogoDiv = styled.div`
     left: 0;
     top: 0;
     color: #b08a4b;
+    @media screen and (max-device-width: 1057px){
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        left: 0;
+        width: 100%;
+    }
+    
 `
 export const LogoName = styled.h2`
     margin-bottom: 0;
@@ -125,6 +151,9 @@ export const BodyContainer = styled.div`
             background-color: #000;;
         }
     }
+    @media screen and (max-device-width: 1057px){
+        overflow-y: auto;
+    }
 
 `
 //--------------------------------------//
@@ -146,6 +175,10 @@ export const ButtonPageBlack = styled.button`
         color: #b08a4b;
         border: 1px solid rgba(176, 138, 75, 0.8);
     }
+    @media screen and (max-device-width: 1057px){
+        width: 130px;
+        font-size: 16px;
+    }
 
 `
 
@@ -165,6 +198,10 @@ export const ButtonPageGold = styled.button`
         color: #b08a4b;
         border: 1px solid rgba(176, 138, 75, 0.8);
     }
+    @media screen and (max-device-width: 1057px){
+        width: 130px;
+        font-size: 16px;
+    }
 
 `
 //--------------------------------------//
@@ -182,7 +219,7 @@ export const InputDisplay = styled.input`
     background: rgba(33, 33, 33, 0.8);
     border: 1px solid rgba(221, 221, 221, 0.8);
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 30px;    
 `
 //--------------------------------------//
 
@@ -217,6 +254,13 @@ export const HeaderPage = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100%;
+    @media screen and (max-device-width: 1057px){
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
     
 `
 //--------------------------------------//

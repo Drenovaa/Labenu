@@ -7,6 +7,11 @@ export const HeaderMain = styled.div`
     background-color: #212121;
     width: 100%;
     color: white;
+    @media screen and (max-device-width: 1057px){
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
 `
 
 export const LogoHeader = styled.div`
@@ -22,6 +27,9 @@ export const NavHeader = styled.div`
     grid-column: 1/span 3;
     flex-direction: row;
     justify-content: space-around;
+    @media screen and (max-device-width: 1057px){
+        display: none;
+    }
 `
 
 export const NavOption = styled.div`
@@ -38,6 +46,9 @@ export const NavOption = styled.div`
         color: #b08a4b;
         border-left: 1px solid rgba(176, 138, 75, 0.8);
         border-right: 1px solid rgba(176, 138, 75, 0.8);
+    }
+    @media screen and (max-device-width: 1057px){
+        display: none;
     }
 
 `

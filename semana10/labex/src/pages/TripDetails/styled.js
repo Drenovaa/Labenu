@@ -9,6 +9,14 @@ export const TripContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     height: 80%;
+    @media screen and (max-device-width: 1057px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 1200px;
+        row-gap: 10px;
+    }
 `
 
 export const TripInfo = styled.div`
@@ -18,6 +26,13 @@ export const TripInfo = styled.div`
     background-color: rgba(33, 33, 33, 0.8);
     border-radius: 15px;
     height: 100%;
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+        border: 1px solid rgba(221, 221, 221, 0.8);
+        border-radius: 9px;
+    }
 
 `
 export const TextInfo = styled.p`
@@ -54,13 +69,19 @@ export const Volunteers = styled.div`
             background-color: #000;;
         }
     }
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+        height: 100%;
+        border: 1px solid rgba(221, 221, 221, 0.8);
+        border-radius: 9px;
+    }
 ` 
 export const Passengers = styled.div`
     display: flex;
     flex-direction: column;
     width: 30%;
     background-color: rgba(33, 33, 33, 0.8);
-    border-radius: 15px;
+    border-radius: 10px;
     height: 100%;
     overflow-y: auto;
     ::-webkit-scrollbar-track{
@@ -81,13 +102,19 @@ export const Passengers = styled.div`
             background-color: #000;;
         }
     }
-
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+        height: 100%;
+        border: 1px solid rgba(221, 221, 221, 0.8);
+        border-radius: 9px;
+    }
 `
 
 export const ButtonBody = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
 `
 export const CandidatesDiv = styled.div`
     display: flex;
@@ -100,6 +127,10 @@ export const CandidatesDiv = styled.div`
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+        height: 100%;
+    }
 
 `
 export const ApproveDiv = styled.div`
@@ -107,11 +138,15 @@ export const ApproveDiv = styled.div`
     margin: 20px;
     flex-direction: row;
     justify-content: space-evenly;
+    @media screen and (max-device-width: 1057px){
+        margin: 10px;
+    }
 `
 export const InfoBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 `
 export const HeaderBox = styled.div`
     display: flex;

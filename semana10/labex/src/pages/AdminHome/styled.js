@@ -4,6 +4,10 @@ export const CardTrip = styled.div`
     margin: auto;
     margin-top: 50px;
     width: 60%;
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+        margin-top: 30px;
+    }
 
 `
 

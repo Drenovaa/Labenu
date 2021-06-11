@@ -8,6 +8,9 @@ export const TripDisplay = styled.div`
     flex-wrap: wrap;
     column-gap: 20px;
     margin-bottom: 20px;
+    @media screen and (max-device-width: 1057px){
+        margin: 10px;
+    }
 `
 
 export const CardTrip = styled.div`
@@ -39,6 +42,11 @@ export const HeaderUser = styled.div`
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    @media screen and (max-device-width: 1057px){
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 
 `
 export const UserButton = styled.div`

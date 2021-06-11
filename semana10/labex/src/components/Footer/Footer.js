@@ -28,7 +28,6 @@ export default function Footer() {
                     <OptionLink>Informações</OptionLink>
                     <FooterLinks onClick={()=> history.push("/404")}>É possivel ir de fusca até o sol?</FooterLinks>
                     <FooterLinks onClick={()=> history.push("/404")}>Quando fica de noite no sol?</FooterLinks>
-                    <FooterLinks onClick={()=> history.push("/404")}>É possivel perder peso indo para marte?</FooterLinks>
                 </MainOption>
                 <MainOption>
                     <OptionLink>Institucional</OptionLink>

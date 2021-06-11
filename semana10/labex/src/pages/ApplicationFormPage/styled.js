@@ -18,12 +18,19 @@ border-radius: 30px;
     appearance: none;
     margin: 0; 
 }
+@media screen and (max-device-width: 1057px){
+        border-radius: 20px;
+    }
 `
 
 export const ApplicationHeader = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    @media screen and (max-device-width: 1057px){
+        margin-top: 0px;
+    }
+    
 `
 
 export const ApplicationContainer = styled.div`
@@ -32,6 +39,9 @@ export const ApplicationContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 60%;
+    @media screen and (max-device-width: 1057px){
+        width: 90%;
+    }
 
 `
 export const ButtonsDiv = styled.div`
@@ -39,11 +49,17 @@ export const ButtonsDiv = styled.div`
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    @media screen and (max-device-width: 1057px){
+        margin-bottom: 0px;
+    }
+
 `
 export const InfoDiv = styled.div`
     display: flex;
     justify-content: space-between;
-
+    @media screen and (max-device-width: 1057px){
+        flex-direction: column;
+    }
 `
 
 export const InputApplyAge = styled.input`
@@ -64,6 +80,11 @@ border-radius: 30px;
     appearance: none;
     margin: 0; 
 }
+@media screen and (max-device-width: 1057px){
+        border-radius: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
 `
 export const InputApplyText = styled.input`
 margin-top: 20px;
@@ -82,6 +103,9 @@ border-radius: 30px;
     appearance: none;
     margin: 0; 
 }
+@media screen and (max-device-width: 1057px){
+        border-radius: 20px;
+    }
 `
 export const SelectDisplayApply = styled.select`
     margin-top: 20px;
@@ -95,6 +119,9 @@ export const SelectDisplayApply = styled.select`
     border: 1px solid rgba(221, 221, 221, 0.8);
     border-radius: 10px;
     text-align-last:center;
+    @media screen and (max-device-width: 1057px){
+        width: 100%;
+    }
 
 `
 
