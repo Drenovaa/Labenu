@@ -94,7 +94,7 @@ export default function ApplicationFormPage() {
                                         <InputApplyAge 
                                             type="number" 
                                             name="age"
-                                            min="0"
+                                            min="18"
                                             placeholder="idade"
                                             value={form.age}
                                             onChange={handleValue}
