@@ -146,13 +146,13 @@ export const LoginButton = styled.button`
 `
 
 export const BackVideo = styled.video`
-  object-fit: cover;
+  object-fit: ${props=> props.error ? 'contain' : 'cover'};
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
+  top: ${props=> props.error ? '-100px' : '0'};
   left: 0;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 0;
 `
 

@@ -10,11 +10,10 @@ const ErrorPage = () => {
 
     return(
         <MainBody>
-            <VideoError/>
+            <VideoError mobile={"display"}/>
             <LoginWelcome>
                 <LogoContainer>
                     <LogoLogin src={logoB}/>
-                    <LabedditText onClick={ () => goHome(history) }>LABEDDIT</LabedditText>
                 </LogoContainer>
             </LoginWelcome>
             <ErrorDisplay>

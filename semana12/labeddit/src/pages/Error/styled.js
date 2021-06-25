@@ -6,7 +6,7 @@ import backgroundVideo from './../../img/error.mp4'
 
 const VideoError = () =>{
     return(
-    <BackVideo autoPlay loop muted>
+    <BackVideo error={true} autoPlay loop muted>
         <source src={backgroundVideo} />
     </BackVideo>)
 }
@@ -18,6 +18,10 @@ export const SelectAction = styled.div`
     column-gap: 40px;
     margin-top: 100px;
     margin-left: 20px;
+    @media screen and (max-device-width: 700px){
+        flex-direction: column;
+        row-gap: 50px;
+    }
 `
 
 export const ErrorDisplay = styled.div`
@@ -25,4 +29,5 @@ export const ErrorDisplay = styled.div`
     align-items: flex-end;
     z-index: 1;
     justify-content: space-evenly;
+
 `
