@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from '../../hooks/useForm';
 import axios from 'axios';
 import { URL } from '../../parameters/URL';
 import { CommentDiv, TextDisplay } from './styled';
 import { ButtonC } from '../main/main';
-import { useContext } from 'react/cjs/react.development';
 import LabedditContext from '../../global/LabedditContext';
 import { useParams } from 'react-router-dom';
 
@@ -52,4 +51,4 @@ export function TextArea (props) {
   }
 
 
-export default TextArea;
+export default TextArea; 
