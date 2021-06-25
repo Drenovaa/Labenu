@@ -27,11 +27,11 @@ export function SingUp (){
 
     const signup = (event) =>{
         event.preventDefault()
-        const body = {
-            username: form.username,
-            email: form.email,
-            password: form.password
-        }
+            const body = {
+                username: form.username,
+                email: form.email,
+                password: form.password
+            }
         axios
             .post(URL+"/users/signup", body)
             .then((res) => {
@@ -50,8 +50,6 @@ export function SingUp (){
                 }
             })
     }
-
-
 
     return (
         <MainBody>
@@ -97,5 +95,5 @@ export function SingUp (){
         </MainBody>
     );
   };
-  
+
   export default SingUp
