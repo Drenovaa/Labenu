@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Loading from '../../components/Loading/Loading';
@@ -7,17 +7,16 @@ import { BackgroundDisplay } from '../Home/styled';
 import { BodyPost, Comments, CommentSection, DetailPage, DetailPost, NewComment, PostView } from './styled';
 import Comment from './../../components/Comment/Comment'
 import TextArea from './../../components/TextArea/TextArea'
-import { useContext } from 'react/cjs/react.development';
 import LabedditContext from '../../global/LabedditContext';
 import ButtonTop from '../../components/ButtonTop/ButtonTop';
 import { ButtonA } from '../../components/main/main';
 import { goToLastPage } from '../../routes/coordinator';
 
-export function Post (){
+export function PostPage (){
     const {id} = useParams()
     const history = useHistory()
     const {comments, getComments, post} = useContext(LabedditContext)
-    
+
     useEffect(() =>{
         if(localStorage.getItem('token')){
             window.scrollTo(0, 0)
@@ -40,7 +39,6 @@ export function Post (){
                 userVote={comment.userVote}
             />)
     })
-  
 
     return (
         <BodyPost>
@@ -82,5 +80,5 @@ export function Post (){
         </BodyPost>
     );
   };
-  
-  export default Post
+
+  export default PostPage
