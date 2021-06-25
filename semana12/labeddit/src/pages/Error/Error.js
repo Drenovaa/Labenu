@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { LabedditText, LoginButton, LoginWelcome, LogoContainer, LogoLogin, MainBody } from '../../components/main/main'
+import { LoginButton, LoginWelcome, LogoContainer, LogoLogin, MainBody } from '../../components/main/main'
 import { goHome, goToLastPage } from '../../routes/coordinator'
 import logoB from '../../img/logoB.jpg'
 import VideoError, { ErrorDisplay, SelectAction } from './styled'
