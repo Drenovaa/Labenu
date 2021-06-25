@@ -10,9 +10,7 @@ export const Labeddit = (props) =>{
 
     useEffect(() =>{
         getPosts()
-        console.log("Deu")
     },[pagination])
-
 
     const getPosts = () =>{
         const limit = 30*(pagination-1)
@@ -44,8 +42,7 @@ export const Labeddit = (props) =>{
                 console.log(err.response)
         })
     }
-
-
+    
         const data = {
             post,
             setPost,
@@ -63,5 +60,4 @@ export const Labeddit = (props) =>{
         </LabedditContext.Provider>
 
     )
-
-}
+} 
