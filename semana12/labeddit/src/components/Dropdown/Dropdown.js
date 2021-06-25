@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from '../../hooks/useForm';
 import axios from 'axios';
 import { URL } from '../../parameters/URL';
 import { BodyPost, ButtonNewPost, CreateNewPost, FormNewPost, InputTittle } from './styled';
-import { useContext } from 'react/cjs/react.development';
 import LabedditContext from '../../global/LabedditContext';
 
 const initialForm = {title:"", body: ""}
@@ -43,7 +42,7 @@ export function Dropdown () {
                   onChange={handleValue}
                   value={form.title}
                 />
-              
+
                 <BodyPost
                 placeholder="texto do seu post"
                 name="body"
@@ -57,5 +56,4 @@ export function Dropdown () {
     );
   }
 
-
-export default Dropdown;
+export default Dropdown; 
