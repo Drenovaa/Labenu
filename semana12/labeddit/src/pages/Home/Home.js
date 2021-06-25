@@ -5,7 +5,7 @@ import Posts from '../../components/Posts/Posts'
 import { useHistory } from 'react-router-dom';
 import Loading from './../../components/Loading/Loading'
 import Dropdown from '../../components/Dropdown/Dropdown';
-import { BackToTop, ButtonA } from '../../components/main/main';
+import { ButtonA } from '../../components/main/main';
 import LabedditContext from '../../global/LabedditContext';
 import ButtonTop from '../../components/ButtonTop/ButtonTop';
 
@@ -13,10 +13,7 @@ const Home = () => {
     const history = useHistory()
     const [newPost, setNewPost] = useState(false)
     const {post} = useContext(LabedditContext)
-
-
     const {getPosts} = useContext(LabedditContext)
-
 
     useEffect(() =>{
         if(localStorage.getItem('token')){   
@@ -25,8 +22,7 @@ const Home = () => {
             history.replace('/')
         }
     },[])
-    
-  
+
     const showInput = () =>{
         setNewPost(!newPost)
     }
@@ -68,5 +64,5 @@ const Home = () => {
         </BodyHome>
     );
   };
-  
+
   export default Home
