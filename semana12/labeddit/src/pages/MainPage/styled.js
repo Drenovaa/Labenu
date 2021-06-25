@@ -25,4 +25,3 @@ export const SelectPage = styled.div`
 }
 
 `
-// @media screen and (max-device-width: 700px){}
