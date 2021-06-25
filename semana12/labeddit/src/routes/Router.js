@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Login from '../pages/Login/Login'
 import SignUp from '../pages/SignUp/SignUp'
-import Post from '../pages/Post/Post'
+import PostPage from '../pages/PostPage/PostPage'
 import Error from '../pages/Error/Error'
 import Home from '../pages/Home/Home'
 import MainPage from '../pages/MainPage/MainPage'
@@ -25,7 +25,7 @@ const Router = () => {
                 <Home/>
             </Route>
             <Route exact path='/posts/:id/comments'>
-                <Post/>
+                <PostPage/>
             </Route>
             <Route>
                 <Error/>
