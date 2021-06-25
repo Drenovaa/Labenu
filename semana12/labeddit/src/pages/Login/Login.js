@@ -16,7 +16,6 @@ export function Login (){
     const [form, handleValue, resetForm] = useForm(initialForm)
     const history = useHistory()
 
-
     useEffect(() =>{
         if(localStorage.getItem('token')){
             history.push('/posts')
@@ -47,8 +46,6 @@ export function Login (){
                 }
             })
     }
-
-
 
     return (
         <MainBody>
@@ -85,5 +82,5 @@ export function Login (){
         </MainBody>
     );
   };
-  
+
   export default Login
