@@ -1,20 +1,27 @@
 export const goToLogin = (history) => {
-    history.push('/login')
+    history.push('/users/login')
 }
 
 export const goToSignUp = (history) => {
-    history.push('/signup')
+    history.push('/users/signup')
 }
 
 export const goToFeed = (history) => {
-    history.push('/feed')
+    history.push('/posts')
 }
 
 export const goToPostDetail = (history, id) => {
-    history.push(`/feed/detail/${id}`)
+    history.push(`/posts/${id}/comments`)
 }
 
 export const goToLogout = (history) => {
-    // window.localStorage.removeItem('token')
+    window.localStorage.removeItem('token')
     history.replace('/')
 }
+
+export const goHome = (history) =>{
+        history.replace('/')
+}
+export const goToLastPage = (history) => {
+    history.goBack();
+  };

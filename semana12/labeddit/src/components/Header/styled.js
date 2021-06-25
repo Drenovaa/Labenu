@@ -5,13 +5,12 @@ export const MainHeader = styled.div`
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid rgb(80,80,80);
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 2rem #7900bf,
-              0 0 0.8rem #7900bf,
-              0 0 2.8rem #7900bf,
-              0 0 1.3rem #7900bf;
-    background-color: #202020;
+    background: linear-gradient(to bottom, #000 37%, #27003d 180%);
+    :hover{
+        box-shadow: 0 0 .2rem #cf0299,
+              0 0 .6rem #cf0299;
+        transition: box-shadow 300ms;
+    }
 `
 export const LogoContainer = styled.div`
     color: #f98751;
@@ -24,6 +23,12 @@ export const LogoContainer = styled.div`
 export const LogoHeader = styled.img`
     width: 5%;
     min-width: 70px;
+    :hover{
+        cursor: pointer;
+    }
+    @media screen and (max-device-width: 404px){
+        display: none;
+    }
 `
 export const ButtonsHeader = styled.div`
     display: flex;
@@ -32,13 +37,8 @@ export const ButtonsHeader = styled.div`
 
 `
 
+export const NameHeader = styled.img`
+    width: 200px;
+    max-width: 200px;
+`
 
-/*
-#f98751 - borda
-#7900bf - capa1
-#cf0299 - capa2
-#000 - noice
-
-
-
-*/

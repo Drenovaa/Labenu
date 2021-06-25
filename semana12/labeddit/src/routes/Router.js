@@ -5,21 +5,26 @@ import SignUp from '../pages/SignUp/SignUp'
 import Post from '../pages/Post/Post'
 import Error from '../pages/Error/Error'
 import Home from '../pages/Home/Home'
+import MainPage from '../pages/MainPage/MainPage'
+import './../App.css'
 
 const Router = () => {
     return (
     <BrowserRouter>
         <Switch>
             <Route exact path='/'>
+                <MainPage/>
+            </Route>
+            <Route exact path='/users/login'>
                 <Login/>
             </Route>
-            <Route exact path='/signup'>
+            <Route exact path='/users/signup'>
                 <SignUp/>
             </Route>
-            <Route exact path='/feed'>
+            <Route exact path='/posts'>
                 <Home/>
             </Route>
-            <Route exact path='/feed/detail/:id'>
+            <Route exact path='/posts/:id/comments'>
                 <Post/>
             </Route>
             <Route>

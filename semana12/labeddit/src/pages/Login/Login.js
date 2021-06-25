@@ -1,32 +1,88 @@
-import React from 'react'
-import backgroundVideo from './../../img/LoginBack.mp4'
-import { BackVideo, FormUser, LabedditText, LoginBody, LoginContainer, LoginDisplay, LoginWelcome, LogoContainer, LogoLogin } from './styled';
+import React, { useEffect } from 'react'
 import logoB from '../../img/logoB.jpg'
-import { InputA } from '../../components/main/main';
+import { InputA, LoginButton, LoginWelcome, LogoContainer, LogoLogin, LogoName, MainBody } from '../../components/main/main';
+import { useHistory } from 'react-router-dom';
+import { goHome } from '../../routes/coordinator';
+import BackgroundVideo from '../../components/BackGroundVideo/BackgroundVideo';
+import {FormUser, LoginDisplay, SelectPage} from './styled'
+import { useForm } from '../../hooks/useForm';
+import { URL } from '../../parameters/URL';
+import axios from 'axios';
+import logoT from '../../img/LabedditLogo.png'
 
+const initialForm = {email: "", password:""}
 
 export function Login (){
+    const [form, handleValue, resetForm] = useForm(initialForm)
+    const history = useHistory()
+
+
+    useEffect(() =>{
+        if(localStorage.getItem('token')){
+            history.push('/posts')
+        }
+    })
+
+    const login = (event) =>{
+        event.preventDefault()
+        const body = {
+            email: form.email,
+            password: form.password,
+        }
+        axios
+            .post(URL+"/users/login", body)
+            .then((res) => {
+                localStorage.setItem("token", res.data.token)
+                history.push('/posts')
+                resetForm()
+            })
+            .catch((err) => {
+                if(err.response.data.errors){
+                    const error = err.response.data.errors.map((warning)=>{
+                        return warning
+                    })
+                    alert(`${err.response.data.message} ${Object.keys(error[0])} ${Object.values(error[0])}`)
+                }else{
+                    alert(err.response.data)
+                }
+            })
+    }
+
+
+
     return (
-        <LoginBody>
-            <BackVideo autoPlay loop muted>
-                <source src={backgroundVideo} />
-            </BackVideo>
+        <MainBody>
+            <BackgroundVideo/>
             <LoginWelcome>
                 <LogoContainer>
-                    <LogoLogin src={logoB}/>
-                    <LabedditText>LABEDDIT</LabedditText>
+                    <LogoLogin login={true} src={logoB}/>
+                    <LogoName src={logoT}/>
                 </LogoContainer>
             </LoginWelcome>
             <LoginDisplay>
-                <h1>Login</h1>
-                <FormUser>
-                    <label>Usuário</label>
-                    <InputA placeholder="nome@email.com"/>
+                <FormUser onSubmit={login}>
+                    <label>Email</label>
+                    <InputA
+                        name="email"
+                        type="email"
+                        onChange={handleValue}
+                        value={form.email}
+                        placeholder="nome@email.com"
+                        />
                     <label>Senha</label>
-                    <InputA/>
+                    <InputA
+                        name="password"
+                        onChange={handleValue}
+                        value={form.password}
+                        type="password"
+                        />
+                    <SelectPage>
+                        <LoginButton onClick={()=> goHome(history)}>Voltar</LoginButton>
+                        <LoginButton>Login</LoginButton>
+                    </SelectPage>
                 </FormUser>
             </LoginDisplay>
-        </LoginBody>
+        </MainBody>
     );
   };
   
