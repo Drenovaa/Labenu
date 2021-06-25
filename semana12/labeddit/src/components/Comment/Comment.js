@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AvatarDisplay, CommentBody, CommentDisplay, CommentFooter, CommentHeader, CountVotes, DownArrow, InfoComment, UpArrow, UserAvatar, VoteComment } from './styled';
 import arrow from './../../img/arrow2.svg'
 import axios from 'axios';
 import { URL } from '../../parameters/URL';
-import { useContext } from 'react/cjs/react.development';
 import LabedditContext from '../../global/LabedditContext';
 import { useParams } from 'react-router-dom';
 
@@ -21,7 +20,7 @@ const Comment =(props) =>{
             .then((res) =>{
                 getPosts()
                 getComments(id)
-                
+
             })
             .catch((err) =>{
                 alert(err.response.data.message)
@@ -43,7 +42,6 @@ const Comment =(props) =>{
           })
       }
 
-      
 
     return (
 
@@ -60,11 +58,11 @@ const Comment =(props) =>{
                 </CommentBody>
                 <CommentFooter>
                     <VoteComment>
-                    {props.userVote === 1 ? <UpArrow src={arrow} upVoted={true} onClick={()=> removeVote(props.id)} /> : <UpArrow src={arrow} upVoted={false}  onClick={()=> commentVote(props.id, 1)}/>}
+                    {props.userVote === 1 ? <UpArrow src={arrow} upVoted={"true"} onClick={()=> removeVote(props.id)} /> : <UpArrow src={arrow} upVoted={"false"}  onClick={()=> commentVote(props.id, 1)}/>}
                     </VoteComment >
-                    <CountVotes color={props.userVote !== null ? (Number(props.userVote) === 1 ? true : false): null} >{props.voteSum !== null ? props.voteSum : 0}</CountVotes>
+                    <CountVotes color={props.userVote !== null ? (props.userVote === 1 ? "1" : "0"): null} >{props.voteSum !== null ? props.voteSum : 0}</CountVotes>
                     <VoteComment>
-                    {props.userVote === -1 ? <DownArrow src={arrow} downVoted={true} onClick={()=> removeVote(props.id)}/> : <DownArrow src={arrow} downVoted={false} onClick={()=> commentVote(props.id, -1)}/>}
+                    {props.userVote === -1 ? <DownArrow src={arrow} downVoted={"true"} onClick={()=> removeVote(props.id)}/> : <DownArrow src={arrow} downVoted={"false"} onClick={()=> commentVote(props.id, -1)}/>}
                     </VoteComment>
                 </CommentFooter>
             </InfoComment>
