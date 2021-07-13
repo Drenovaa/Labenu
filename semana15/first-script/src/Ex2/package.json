@@ -1,0 +1,11 @@
+{
+"name": "ex2",
+"version": "1.0.0",
+"description": "",
+"main": "ex2.js",
+"scripts": {
+  "start": "clear && tsc && node ../../build/Ex2/ex2.js"
+},
+"author": "Guilherme Rodrigues",
+"license": "ISC"
+}
