@@ -1,0 +1,11 @@
+{
+  "name": "aula-node-ex2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Exercicio2.js",
+  "scripts": {
+    "start": "node ./Exercicio2.js"
+  },
+  "author": "Guilherme Rodrigues",
+  "license": "ISC"
+}
