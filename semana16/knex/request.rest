@@ -1,0 +1,19 @@
+GET http://localhost:3003/
+
+###
+
+GET http://localhost:3003/actor/001
+
+###
+
+POST http://localhost:3003/actor
+Content-Type: application/json
+
+{
+    "id": "004",
+    "salary": 40000
+}
+
+###
+
+DELETE http://localhost:3003/actor/001
