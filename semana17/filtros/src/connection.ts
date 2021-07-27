@@ -4,12 +4,12 @@ dotenv.config()
 const connection = knex({ // Estabelece conexão com o banco
  client: "mysql",
  connection: {
- host: "35.226.146.116",
- port: 3306,
- user: "2125554-guilherme-rodrigues",
- password: "wEBIZVvywxQXZ9V3hvo0",
- database: "paiva-2125554-guilherme-rodrigues",
- multipleStatements: true
+    host: process.env.DB_HOST,
+    port: 3306,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_SCHEMA,
+    multipleStatements: true
  }
 })
 export default connection
