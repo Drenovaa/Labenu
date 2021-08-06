@@ -14,3 +14,11 @@ export class Tickets extends Product {
         this.destiny = destiny
     }
 }
+
+export interface TicketsRegistration {
+    name: string,
+    description: string,
+    price: number,
+    origin: string,
+    destiny: string
+};

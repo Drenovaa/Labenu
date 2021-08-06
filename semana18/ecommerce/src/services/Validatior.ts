@@ -1,4 +1,5 @@
 import { ProductRegistration } from "../model/product";
+import { TicketsRegistration } from "../model/ticket";
 import { UserRegistration } from "../model/user";
 
 export function checkUser({name, email, age}: UserRegistration) {
@@ -43,6 +44,33 @@ export function checkProduct({name, description, price}: ProductRegistration) {
     }
 
     if(name && description && price){
+        return true
+    }
+}
+
+export function checkTicket({name, description, price, origin, destiny}: TicketsRegistration) {
+
+    if(!name){
+        throw new Error("É preciso inserir um nome para criar um novo produto")
+    }
+
+    if(!description){
+        throw new Error("É preciso inserir uma descrição para criar um novo produto")
+    }
+
+    if(!price){
+        throw new Error("É preciso inserir um valor para criar um novo produto")
+    }
+
+    if(!origin){
+        throw new Error("É preciso inserir uma origem para criar uma viagem")
+    }
+
+    if(!destiny){
+        throw new Error("É preciso inserir uma destino para criar uma viagem")
+    }
+
+    if(name && description && price && origin && destiny){
         return true
     }
 }
